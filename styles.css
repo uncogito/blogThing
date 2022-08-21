@@ -1,0 +1,141 @@
+@import url(variabls.css);
+*::selection {
+    background-color: var(--highlight-color);
+    color: var(--highlight-text-color)};
+}
+
+body {margin:0;} 
+
+
+
+
+.layout {
+    display:grid;
+    width: 100vw;;
+    margin:0;
+    height:100vh;
+    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-columns: 15vw 85vw;
+    grid-template-areas:
+        'header header' 
+        'nav main'
+        'footer footer';
+    grid-gap: 0px;
+    background-color: var(--bg-color);
+    padding: 0px;
+}
+nav {
+    position:sticky;
+    align-self:start;
+    display:flex;
+    grid-area: nav;
+    height: 90vh;
+    align-items: center;
+    flex-direction:column; 
+    justify-content: space-evenly;
+}
+.navButton {
+    font-size: 5vw;
+    color:#fff;
+    display:flex;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    justify-content:center;
+    align-items:center;
+    height: 20vh;
+    width: 10vw;
+    background-color: var(--button-color);
+
+}
+
+header {
+    grid-area:header;
+    font-size:4vh;
+    text-align: center;
+    background-color: var(--header-color);
+}
+
+
+article {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    align-items: center;
+    border:white solid;
+    padding:10px;
+    grid-area:main;
+}
+
+#postContainer {
+    overflow:scroll;
+}
+
+footer {
+    grid-area: footer;
+    position: sticky;
+    color:#000;
+    font-size:2vh;
+    background-color: var(--footer-color);
+}
+
+.postPicture {
+    margin: 2vh;
+    height: 30vh;
+    width: 30vh;
+    
+}
+
+
+/* tablets
+@media screen and (max-width: 768px){
+    .layout {
+        display:grid;
+        width: 100vw;;
+        margin:0;
+        height:100vh;
+        grid-template-rows: 5vh 90vh 5vh;
+        grid-template-columns: 15vw 85vw;
+        grid-template-areas:
+            'header header' 
+            'nav main'
+            'footer footer';
+        grid-gap: 0px;
+        background-color: #e37;
+        padding: 0px;
+    }
+}
+*/
+@media only screen and (min-width: 600px) {
+    .layout {
+        grid-template-rows: 11vh 11vh 71vh 7vh;
+        grid-template-columns: 100vw;
+        grid-template-areas:
+            'header'
+            'nav'
+            'main'
+            'footer';
+    }
+    nav {
+        justify-items: center;
+        flex-direction:row-reverse;
+        align-content: space-evenly;
+        height:auto;   
+    }
+    .navButton {
+        writing-mode: horizontal-tb;
+        text-orientation:sideways;
+        font-size: 2vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height: 8vh;
+        width: 23vh;
+        margin: 10px;
+    
+    }
+}
+
+/*
+#navAboutMe {
+    height: 2vh;
+}*/

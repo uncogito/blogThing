@@ -9,7 +9,7 @@ nav {
     justify-content: space-evenly;
 }
 .navButton {
-    font-size: 5vw;
+    font-size: 4vh;
     color:#fff;
     display:flex;
     writing-mode: vertical-rl;
@@ -32,7 +32,7 @@ nav {
     .navButton {
         writing-mode: horizontal-tb;
         text-orientation:sideways;
-        font-size: 2vh;
+        font-size: 4vh;
         display:flex;
         justify-content:center;
         align-items:center;

@@ -28,11 +28,12 @@ a:hover {
 a:active {
     color: var(--text-active-color);
 }
+
 #mainFlex {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    height:100vh;
+    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     background-image: var(--main-bg-pic);
@@ -41,7 +42,7 @@ a:active {
 #mainHeader {
     background-image: var(--header-texture-pic);
     display: flex;
-    font-size: 3vh;
+    font-size: 5vh;
     font-weight: bold;
     font-family: sans-serif;
     justify-content: center;
@@ -51,6 +52,7 @@ a:active {
     width: 100vw;
     height: 10vh;
 }
+
 nav {
     height: 10vh;
     display: flex;
@@ -75,12 +77,71 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin: 1vw 1vh;
+    grid-area: header;
 
 }
 
 #aboutHeader>img {
     border-radius: 50%;
     height: 8vh;
+}
+
+#aboutLayout {
+    display: grid;
+    height: 70vh;
+    overflow: scroll;
+    grid-template-rows: 10vh 30vh 10vh;
+    grid-template-columns: 85vw;
+    grid-template-areas:
+        'header'
+        'main'
+        'contact';
+    grid-gap: 0px;
+
+}
+
+#sectionContainer {
+    display: flex;
+    grid-area: main;
+    font-size: 16px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: contact;
+    font-size: 16px;
+}
+
+#contactSubmit {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: var(--button-color);
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#inputName,
+#inputEmail,
+#inputWebsite,
+#inputMessage {
+    width: 50%;
+    box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -webkit-box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -moz-box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -107,40 +168,44 @@ footer {
     width: 4vh;
 }
 
-#aboutLayout {
-    display: grid;
-    grid-template-rows: 10vh 30vh 10vh;
-    grid-template-columns: 85vw;
-    grid-template-areas:
-        'header'
-        'main'
-        'contact';
-    grid-gap: 0px;
-   
+#surprisePuppies {
+    display: none;
 }
 
-#sectionContainer {
-    display:flex;
-    grid-area: main;
-    font-size: 4vw;
-}
-#contactForm {
-    display:flex;
-    flex-direction:column;
-    grid-area: contact;
-    font-size: 3vw;
-}
-#contactform input[type="text"],
-#contactform input[type="email"],
-#contactform input[type="url"],
-#contactform textarea {
-  width:100%;
-  box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
-  -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
-  -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
-  border:1px solid #000;
-  background:#FFF;
-  margin:0 0 5px;
-  padding:10px;
-  border-radius:5px;
+@media only screen and (min-width: 600px) {
+    #aboutLayout {
+        grid-template-rows: 10vh 35vh 20vh;
+        grid-template-columns: 45vw 45vw;
+        grid-template-areas:
+            'header header'
+            'main contact'
+            'surprise surprise';
+        gap: 5px;
+    }
+
+    #aboutContent {
+        font-size: 18px;
+    }
+
+    #contactForm {
+        justify-content: unset;
+    }
+
+    #aboutHeader {
+        justify-content: unset;
+    }
+
+    #contactSubmit {
+        padding: 12px;
+    }
+
+    #surprisePuppies {
+        display: flex;
+        background: var(--surprise-puppies-pic);
+        grid-area: surprise;
+    }
+
+
+
+
 }

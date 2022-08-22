@@ -106,6 +106,10 @@ nav {
     font-size: 16px;
 }
 
+#aboutContent {
+    font-size: 12px;
+}
+
 #contactForm {
     display: flex;
     flex-direction: column;

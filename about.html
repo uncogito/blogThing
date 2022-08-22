@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/aboutStyles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mainFlex">
+
+        <header id="mainHeader">
+            <h1>About This Blog</h1>
+        </header>
+        <nav>
+            <div class="navButton" id="navHome"><a href="index.html">about</a></div>
+            <div class="navButton" id="navLatest"><a href="post3.html">latest</a></div>
+        </nav>
+        <div id="aboutLayout">
+            <header id="aboutHeader">
+                <img src="images/aboutavatar.png" alt="He doesn't exist">
+                <h4>John Doe</h4>
+            </header>
+            <div id="sectionContainer">
+                <section>
+                    This blog was created in order to <b>fill the rubric requiremends and pass.</b> However, as it was <em> lacking</em>, this is a <u>resubmission.</u>
+                    I even managed to find a relevant qoute! <blockquote cite="https://www.brainyquote.com/quotes/jeffrey_zeldman_722248"> Validation is easy - you run your site through a validator, and it's either valid or it isn't.
+                    The rest of the stuff, such as whether my logo or the biggest headline should be the h1 in my HTML, isn't so easy and is subject to interpretation.
+                    <em>Author: Jeffrey Zeldman</em></blockquote>
+                </section>
+            </div>
+            <form id="contactForm">
+            <!-- form mostly taken from https://ultimatecourses.com/blog/creating-an-html5-responsive-ready-contact-form-with-custom-javascript-feature-detection-->
+                <h3>A contact form, for being in contact</h3>
+                <div>
+                    <label>
+                    <span>Name: (required)</span>
+                    <input placeholder="Please enter your name" type="text" tabindex="1" required>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                    <span>Email: </span>
+                    <input placeholder="Please enter your email address" type="email" tabindex="2">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                    <span>Website:</span>
+                    <input placeholder="Begin with https://" type="url" tabindex="3">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                    <span>Message:</span>
+                    <textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
+                </label>
+                </div>
+                <div>
+                    <button name="submit" type="submit" id="contact-submit">Send Email</button>
+                </div>
+            </form>
+
+
+
+        </div>
+        
+    </div>
+    <footer>
+            <ul id="socialFooter">
+                <li><a href="https://www.facebook.com/myuser"><img src="images/facebook.png" alt="facebook"></a></li>
+                <li><a href="https://www.linkedin.com/myuser"><img src="images/linkedin.png" alt="linkedin"></a></li>
+                <li><a href="https://www.instagram.com/myuser"><img src="images/Instagram.png" alt="instagram"></a></li>
+            </ul>
+    </footer>
+</body>
+
+</html>

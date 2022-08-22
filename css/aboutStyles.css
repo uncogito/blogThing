@@ -28,18 +28,20 @@ a:hover {
 a:active {
     color: var(--text-active-color);
 }
-
 #mainFlex {
-    display: flex;
+    display:flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    height:100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-image: var(--main-bg-pic);
 }
 
 #mainHeader {
     background-image: var(--header-texture-pic);
     display: flex;
-    font-size: 4vh;
+    font-size: 3vh;
     font-weight: bold;
     font-family: sans-serif;
     justify-content: center;
@@ -49,7 +51,6 @@ a:active {
     width: 100vw;
     height: 10vh;
 }
-
 nav {
     height: 10vh;
     display: flex;
@@ -68,28 +69,8 @@ nav {
     background-color: var(--button-color);
 }
 
-#blogPostCardsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 70vh;
-    width: 100%;
-    background-image: var(--main-bg-pic);
-    overflow: scroll;
-}
 
-
-.blogPostCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: #000 2px solid;
-    width: 60vw;
-    padding: 1vw;
-    margin: 1vw;
-}
-
-.writerInfo {
+#aboutHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,25 +78,11 @@ nav {
 
 }
 
-.writerInfo>img {
+#aboutHeader>img {
     border-radius: 50%;
     height: 8vh;
 }
 
-.postInfo {
-    display: flex;
-    flex-direction: column;
-}
-
-.imageContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.imageContainer>a>img {
-    width: 10vw;
-    height: 10vw;
-}
 
 footer {
     display: flex;
@@ -140,17 +107,40 @@ footer {
     width: 4vh;
 }
 
-@media only screen and (min-width: 480px) {
-    .blogPostCard {
-        width: 220px;
-        height: 362px;
+#aboutLayout {
+    display: grid;
+    grid-template-rows: 10vh 30vh 10vh;
+    grid-template-columns: 85vw;
+    grid-template-areas:
+        'header'
+        'main'
+        'contact';
+    grid-gap: 0px;
+   
+}
 
-    }
-
-    #blogPostCardsContainer {
-        flex-direction: row;
-        align-content: space-between;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+#sectionContainer {
+    display:flex;
+    grid-area: main;
+    font-size: 4vw;
+}
+#contactForm {
+    display:flex;
+    flex-direction:column;
+    grid-area: contact;
+    font-size: 3vw;
+}
+#contactform input[type="text"],
+#contactform input[type="email"],
+#contactform input[type="url"],
+#contactform textarea {
+  width:100%;
+  box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  border:1px solid #000;
+  background:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
 }

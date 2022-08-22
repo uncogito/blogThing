@@ -1,44 +1,46 @@
 nav {
-    position:sticky;
-    align-self:start;
-    display:flex;
+    position: sticky;
+    align-self: start;
+    display: flex;
     grid-area: nav;
     height: 90vh;
     align-items: center;
-    flex-direction:column; 
+    flex-direction: column;
     justify-content: space-evenly;
 }
+
 .navButton {
     font-size: 4vh;
-    color:#fff;
-    display:flex;
+    display: flex;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     height: 20vh;
     width: 10vw;
     background-color: var(--button-color);
 
 }
+
 @media only screen and (min-width: 600px) {
 
     nav {
         justify-items: center;
-        flex-direction:row-reverse;
+        flex-direction: row-reverse;
         align-content: space-evenly;
-        height:auto;   
+        height: auto;
     }
+
     .navButton {
         writing-mode: horizontal-tb;
-        text-orientation:sideways;
+        text-orientation: sideways;
         font-size: 4vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 8vh;
         width: 23vh;
         margin: 10px;
-    
+
     }
 }

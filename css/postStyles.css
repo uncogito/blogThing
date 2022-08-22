@@ -1,40 +1,44 @@
 @import url(colorVariables.css);
-@import url(nav-blog-post.css);
+@import url(nav.css);
 @import url(photoVariables.css);
+
 *::selection {
     background-color: var(--highlight-color);
     color: var(--highlight-text-color);
 }
+
 a:link {
     text-decoration: none;
     color: var(--text-color);
-  }
-  
+}
+
 a:visited {
-color: var(--text-visited-color);
+    color: var(--text-visited-color);
 }
 
 a:hover {
-color: var(--highlight-color);
+    color: var(--highlight-color);
 }
 
 a:active {
-color: var(--text-active-color);
+    color: var(--text-active-color);
 }
+
 body {
     border: none;
-    margin:0;
-} 
+    margin: 0;
+}
 
 .layout {
-    display:grid;
-    width: 100vw;;
-    margin:0;
-    height:100vh;
-    grid-template-rows: 5vh 90vh 5vh;
+    display: grid;
+    width: 100vw;
+    ;
+    margin: 0;
+    height: 100vh;
+    grid-template-rows: 10vh 80vh 10vh;
     grid-template-columns: 15vw 85vw;
     grid-template-areas:
-        'header header' 
+        'header header'
         'nav main'
         'footer footer';
     grid-gap: 0px;
@@ -45,10 +49,10 @@ body {
 
 #mainHeader {
     background-image: var(--header-texture-pic);
-    display:flex;
-    grid-area:header;
-    font-size:4vh;
-    font-weight:bold;
+    display: flex;
+    grid-area: header;
+    font-size: 4vh;
+    font-weight: bold;
     font-family: sans-serif;
     justify-content: center;
     align-items: center;
@@ -56,50 +60,52 @@ body {
     background-color: var(--header-color);
 }
 
-#articleHeader{
-    width:81vw;
+#articleHeader {
+    width: 81vw;
 }
+
 article {
     display: flex;
     align-items: center;
     text-align: justify;
     flex-direction: column;
-    border:white solid;
-    width:81vw;
-    margin:0;
-    padding:0;
+    border: white solid;
+    width: 81vw;
+    margin: 0;
+    padding: 0;
 }
 
 time {
-    font-weight:bold;
-    font-style:italic;
+    font-weight: bold;
+    font-style: italic;
 }
 
 #postContainer {
     overflow-x: hidden;
-    grid-area:main;
-    display:flex;
+    grid-area: main;
+    display: flex;
     align-items: center;
     flex-direction: column;
-    background: var(--main-bg-pic) ; 
-    overflow:scroll;
-    margin:0px;
-    padding:3vw;
+    background: var(--main-bg-pic);
+    overflow: scroll;
+    margin: 0px;
+    padding: 3vw;
     width: 79vw;
 }
 
-#postImageContainer{
-    display:flex;
+#postImageContainer {
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2vh;
     height: 34vh;
     width: 50vh;
 }
+
 .postPicture {
     height: 30vh;
     width: 30vh;
-    
+
 }
 
 figcaption {
@@ -110,45 +116,24 @@ figcaption {
 footer {
     grid-area: footer;
     position: sticky;
-    color:#000;
-    font-size:2vh;
     background-color: var(--footer-color);
     background-image: var(--footer-texture-pic);
 }
 
 #socialFooter {
-    list-style:none;
-    display:flex;
+    list-style: none;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items:center;
-    padding:0px;
+    align-items: center;
+    padding: 0px;
 }
 
-#socialFooter > li > a > img {
+#socialFooter>li>a>img {
     height: 4vh;
     width: 4vh;
 }
 
-/* tablets
-@media screen and (max-width: 768px){
-    .layout {
-        display:grid;
-        width: 100vw;;
-        margin:0;
-        height:100vh;
-        grid-template-rows: 5vh 90vh 5vh;
-        grid-template-columns: 15vw 85vw;
-        grid-template-areas:
-            'header header' 
-            'nav main'
-            'footer footer';
-        grid-gap: 0px;
-        background-color: #e37;
-        padding: 0px;
-    }
-}
-*/
 @media only screen and (min-width: 600px) {
     .layout {
         grid-template-rows: 11vh 11vh 71vh 7vh;
@@ -159,23 +144,22 @@ footer {
             'main'
             'footer';
     }
-    #postContainer{
-        width:100vw;
-        padding:0px;
-   
+
+    #postContainer {
+        width: 100vw;
+        padding: 0px;
+
     }
+
     article {
         width: 80vw;
     }
-    #articleHeader{
+
+    #articleHeader {
         width: 80vw;
     }
+
     #mainHeader {
-        font-size:8vh;
+        font-size: 8vh;
     }
 }
-
-/*
-#navAboutMe {
-    height: 2vh;
-}*/

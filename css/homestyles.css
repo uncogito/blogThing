@@ -1,0 +1,135 @@
+@import url(colorVariables.css);
+@import url(photoVariables.css);
+
+*::selection {
+    background-color: var(--highlight-color);
+    color: var(--highlight-text-color);
+}
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:visited {
+    color: var(--text-visited-color);
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+a:active {
+    color: var(--text-active-color);
+}
+
+#mainFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+#mainHeader {
+    background-image: var(--header-texture-pic);
+    display: flex;
+    font-size: 4vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--header-color);
+    width:100vw;
+    height: 10vh;
+}
+
+nav {
+    height:10vh;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    width:100%;
+}
+.navButton {
+    font-size: 4vh;
+    display: flex;
+    width: 35vw;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--button-color);
+}
+
+#blogPostCardsContainer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:70vh;
+    width:100%;
+    background-image: var(--main-bg-pic);
+    overflow:scroll;
+}
+
+.blogPostCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #000 2px solid;
+    width: 60vw;
+    padding: 1vw;
+    margin: 1vw;
+}
+.writerInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1vw 1vh;
+
+}
+.writerInfo > img {
+    border-radius:50%;
+    height: 8vh;
+}
+.postInfo {
+    display:flex;
+    flex-direction:column;
+}
+
+.imageContainer {
+    display:flex;
+    justify-content: center;
+}
+
+.imageContainer > a > img {
+    width: 10vw;
+}
+
+footer {
+    display:flex;
+    height: 10vh;
+    background-color: var(--footer-color);
+    background-image: var(--footer-texture-pic);
+    align-items: center;
+    position:fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#socialFooter {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width:100vw;
+}
+
+#socialFooter>li>a>img {
+    height: 4vh;
+    width: 4vh;
+}

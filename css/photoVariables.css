@@ -1,5 +1,5 @@
-:root{
-    --main-bg-pic: url("/images/leaves2.png");
-    --header-texture-pic: url("/images/headertexture.png");
-    --footer-texture-pic: url("/images/footertexture.png");
+:root {
+    --main-bg-pic: url("../images/leaves2.png");
+    --header-texture-pic: url("../images/headertexture.png");
+    --footer-texture-pic: url("../images/footertexture.png");
 }
